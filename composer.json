@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-0": {
+            "Entities": "./classes"
+        }
+    },
+    "require": {
+        "twig/twig": "3.*"
+    }
+}

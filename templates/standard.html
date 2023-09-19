@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mein Name ist {{ name }}</h1>
+    <ul>
+        {% for job in jobs %}
+        <li>{{ job }}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Titel</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for todo in todos %}
+            <tr>
+                <td>{{ todo.createdAt|date('d.m.Y') }}</td>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
